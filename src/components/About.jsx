@@ -32,27 +32,6 @@ export default function About() {
             </div>
           </div>
         )}
-
-        {portfolioData.certifications && portfolioData.certifications.length > 0 && (
-          <div className="certifications-section">
-            <h3>Certifications</h3>
-            <div className="certifications-scroll">
-              {portfolioData.certifications.map((cert) => (
-                <div key={cert.id} className="certification-card">
-                  <div className="cert-image">
-                    <img src={cert.image} alt={cert.title} />
-                  </div>
-                  <div className="cert-content">
-                    <h4>{cert.title}</h4>
-                    <p className="issuer">{cert.issuer}</p>
-                    <p className="year">{cert.year}</p>
-                    <p className="description">{cert.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );

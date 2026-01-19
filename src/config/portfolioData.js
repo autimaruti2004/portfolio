@@ -20,6 +20,7 @@ export const portfolioData = {
     { label: "About", id: "about" },
     { label: "Skills", id: "skills" },
     { label: "Projects", id: "projects" },
+    { label: "Certifications", id: "certifications" },
     { label: "Contact", id: "contact" },
   ],
 

@@ -1,0 +1,159 @@
+.experience {
+  padding: 6rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #667eea;
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #667eea;
+  border-radius: 50%;
+  margin: 0.5rem 0;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  width: calc(50% - 30px);
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin: 0 1rem;
+}
+
+.job-title {
+  font-size: 1.3rem;
+  color: #667eea;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.company {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 0.3rem 0;
+  font-weight: 500;
+}
+
+.duration {
+  color: #999;
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+}
+
+.job-description {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.job-description li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline-item {
+    flex-direction: row !important;
+  }
+
+  .timeline-dot {
+    margin-left: -8px;
+    margin-right: 1rem;
+  }
+
+  .timeline-content {
+    width: calc(100% - 40px);
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 4rem 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .timeline {
+    padding: 1rem 0;
+  }
+
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline-item {
+    flex-direction: row !important;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-dot {
+    margin-left: -8px;
+    margin-right: 1rem;
+    margin-top: 0.3rem;
+  }
+
+  .timeline-content {
+    width: calc(100% - 40px);
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .job-title {
+    font-size: 1.1rem;
+  }
+
+  .company {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,425 @@
+.hero {
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/hero-bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.hero-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 3;
+  padding-left: 3rem;
+}
+
+.hero-text {
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero-greeting {
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0 0 1.5rem 0;
+  opacity: 0.95;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  word-spacing: 9999px;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0 0 2.5rem 0;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+.hero-description {
+  font-size: 1.05rem;
+  margin: 0 0 2rem 0;
+  opacity: 0.8;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.85rem 2.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.btn-download {
+  background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 180, 219, 0.3);
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 180, 219, 0.5);
+}
+
+.btn-primary {
+  background-color: white;
+  color: #0083b0;
+}
+
+.btn-primary:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.btn-tertiary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-tertiary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 90vh;
+    padding: 3rem 2rem;
+    justify-content: center;
+  }
+
+  .hero-content {
+    max-width: 550px;
+    padding-left: 1rem;
+  }
+
+  .hero-background {
+    background-attachment: scroll;
+  }
+
+  .hero-title {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    padding: 2.5rem 1.5rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 500px;
+    padding-left: 0;
+  }
+
+  .hero-greeting {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 70vh;
+    padding: 2rem 1rem;
+  }
+
+  .hero-content {
+    max-width: 400px;
+  }
+
+  .hero-greeting {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.65rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    min-height: 65vh;
+    padding: 1.5rem 0.8rem;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-greeting {
+    font-size: 0.9rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-tertiary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-tertiary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 90vh;
+    padding: 3rem 2rem;
+  }
+
+  .hero-background {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 7vw, 2.5rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .hero-description {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 70vh;
+    padding: 2rem 1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    gap: 0.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    min-height: 65vh;
+    padding: 1.5rem 0.8rem;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-description {
+    font-size: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}

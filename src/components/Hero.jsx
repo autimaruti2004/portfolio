@@ -15,6 +15,7 @@ export default function Hero() {
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <div className="hero-text">
+          <p className="hero-greeting">Welcome to My Portfolio</p>
           <p className="hero-greeting">Hello, I am</p>
           <h1 className="hero-title">{portfolioData.personal.name}</h1>
           <h2 className="hero-subtitle">{portfolioData.personal.title}</h2>

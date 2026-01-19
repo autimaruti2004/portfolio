@@ -17,7 +17,6 @@
   height: 100%;
   background: url('/hero-bg.jpg') center/cover no-repeat;
   background-attachment: fixed;
-  background-size: cover;
   z-index: 1;
 }
 
@@ -49,6 +48,7 @@
   margin: 0 0 1.5rem 0;
   opacity: 0.95;
   text-transform: uppercase;
+  animation: slideInLeft 0.8s ease 0.2s backwards;
 }
 
 .hero-title {
@@ -58,6 +58,7 @@
   letter-spacing: -2px;
   line-height: 1.1;
   word-spacing: 9999px;
+  animation: slideInLeft 1s ease 0.4s backwards;
 }
 
 .hero-subtitle {
@@ -65,6 +66,7 @@
   font-weight: 400;
   margin: 0 0 2.5rem 0;
   opacity: 0.9;
+  animation: slideInLeft 0.9s ease 0.6s backwards;
   letter-spacing: 0.5px;
 }
 
@@ -82,6 +84,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
+  animation: fadeInUp 0.9s ease 0.8s backwards;
 }
 
 .btn {
@@ -143,6 +146,17 @@
   transform: translateY(-3px);
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -184,10 +198,6 @@
     text-align: center;
   }
 
-  .hero-background {
-    background-attachment: scroll;
-  }
-
   .hero-content {
     max-width: 500px;
     padding-left: 0;
@@ -227,10 +237,6 @@
   .hero {
     min-height: 70vh;
     padding: 2rem 1rem;
-  }
-
-  .hero-background {
-    background-attachment: scroll;
   }
 
   .hero-content {

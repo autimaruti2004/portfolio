@@ -194,7 +194,7 @@ export const portfolioData = {
       title: "Web Developement + ReactJs",
       issuer: "SevenMentor",
       year: "2023",
-      image: "/web-reactjs-seven-mentor.jpg",
+      image: "/web reactjs seven mentor.jpg"
     },
   ],
 

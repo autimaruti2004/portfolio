@@ -17,6 +17,7 @@
   height: 100%;
   background: url('/hero-bg.jpg') center/cover no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   z-index: 1;
 }
 
@@ -183,6 +184,10 @@
     text-align: center;
   }
 
+  .hero-background {
+    background-attachment: scroll;
+  }
+
   .hero-content {
     max-width: 500px;
     padding-left: 0;
@@ -222,6 +227,10 @@
   .hero {
     min-height: 70vh;
     padding: 2rem 1rem;
+  }
+
+  .hero-background {
+    background-attachment: scroll;
   }
 
   .hero-content {

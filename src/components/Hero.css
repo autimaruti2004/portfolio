@@ -49,6 +49,8 @@
   opacity: 0.95;
   text-transform: uppercase;
   animation: slideInLeft 0.8s ease 0.2s backwards;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
 }
 
 .hero-title {
@@ -59,6 +61,8 @@
   line-height: 1.1;
   word-spacing: 9999px;
   animation: slideInLeft 1s ease 0.4s backwards;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
 }
 
 .hero-subtitle {
@@ -68,6 +72,8 @@
   opacity: 0.9;
   animation: slideInLeft 0.9s ease 0.6s backwards;
   letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 .hero-description {
@@ -76,6 +82,8 @@
   opacity: 0.8;
   line-height: 1.6;
   max-width: 600px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 }
 
 .hero-buttons {
@@ -98,6 +106,8 @@
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 .btn-download {

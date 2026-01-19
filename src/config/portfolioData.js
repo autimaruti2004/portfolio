@@ -101,7 +101,7 @@ export const portfolioData = {
       description: "A smart agriculture solution for farmers.",
       fullDescription:
         "SmartSheti is an intelligent platform designed to help farmers optimize their agricultural productivity. It provides real-time crop monitoring, weather forecasting, and market insights. The application uses advanced analytics to help farmers make data-driven decisions and maximize their yield.",
-      technologies: ["React", "Node.js", "MongoDB"],
+      technologies: ["React", "Node.js","Express","REST API", "MongoDB"],
       githubLink: "https://github.com/autimaruti2004/",
       demo: "",
       image: "/project1.jpg",
@@ -112,7 +112,7 @@ export const portfolioData = {
       description: "A comprehensive POS system for retail businesses.",
       fullDescription:
         "A full-featured Point of Sale system designed for retail and restaurant businesses. Features include inventory management, sales tracking, employee management, and real-time reporting. The system helps businesses streamline operations and improve customer service with a user-friendly interface.",
-      technologies: ["Django", "Express", "MongoDB"],
+      technologies: ["Django", "Node.js", "Express", "MongoDB"],
       githubLink: "https://github.com/autimaruti2004/",
       demo: "",
       image: "/project2.jpg",
@@ -123,7 +123,7 @@ export const portfolioData = {
       description: "A simple and effective task management application.",
       fullDescription:
         "A simple and effective task management application built with modern web technologies. It allows users to create, organize, and track their daily tasks efficiently.",
-      technologies: ["Django", "Express", "MongoDB"],
+      technologies: ["HTML", "CSS", "JAVASCRIPT"],
       githubLink: "https://github.com/autimaruti2004/",
       demo: "",
       image: "/project3.jpg",

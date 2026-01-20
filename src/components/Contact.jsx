@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Contact.css';
 import { portfolioData } from '../config/portfolioData';
+import { sendEmail } from '../services/emailService';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,9 @@ export default function Contact() {
     subject: '',
     message: '',
   });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,12 +22,26 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can integrate with email service like EmailJS or create a backend endpoint
-    const mailtoLink = `mailto:${portfolioData.contact.email}?subject=${formData.subject}&body=${formData.message}%0A%0AFrom: ${formData.name} (${formData.email})`;
-    window.location.href = mailtoLink;
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setLoading(true);
+    setError('');
+    setSuccess(false);
+
+    try {
+      // Send email data to Firebase
+      await sendEmail(formData);
+      setSuccess(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      
+      // Clear success message after 3 seconds
+      setTimeout(() => setSuccess(false), 3000);
+    } catch (err) {
+      setError(err.message || 'Failed to send message. Please try again.');
+      console.error('Error sending email:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -60,6 +78,19 @@ export default function Contact() {
 
           <form className="contact-form" onSubmit={handleSubmit}>
             <h3>Contact Me</h3>
+
+            {success && (
+              <div className="success-message">
+                ✓ Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+
+            {error && (
+              <div className="error-message">
+                ✗ {error}
+              </div>
+            )}
+
             <div className="form-group">
               <label htmlFor="name">Your Name</label>
               <input
@@ -70,6 +101,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="Maruti Auti"
+                disabled={loading}
               />
             </div>
 
@@ -83,6 +115,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="autimaruti2004@example.com"
+                disabled={loading}
               />
             </div>
 
@@ -96,6 +129,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="Project Opportunity"
+                disabled={loading}
               />
             </div>
 
@@ -109,11 +143,12 @@ export default function Contact() {
                 required
                 placeholder="Your message here..."
                 rows="5"
+                disabled={loading}
               ></textarea>
             </div>
 
-            <button type="submit" className="submit-btn">
-              Send Message
+            <button type="submit" className="submit-btn" disabled={loading}>
+              {loading ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>

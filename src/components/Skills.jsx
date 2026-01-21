@@ -5,15 +5,15 @@ export default function Skills() {
   return (
     <section id="skills" className="skills">
       <div className="container">
-        <h2 className="section-title">Skills</h2>
+        <h2 className="section-title" data-aos="fade-up">Skills</h2>
         
         <div className="skills-grid">
           {portfolioData.skills.categories.map((category, index) => (
-            <div key={index} className="skill-category">
-              <h3 className="category-title">{category.name}</h3>
+            <div key={index} className="skill-category" data-aos="zoom-in" data-aos-delay={100 + index * 100}>
+              <h3 className="category-title" data-aos="fade-right" data-aos-delay={150 + index * 100}>{category.name}</h3>
               <div className="skill-items">
                 {category.items.map((skill, idx) => (
-                  <span key={idx} className="skill-tag">
+                  <span key={idx} className="skill-tag" data-aos="flip-left" data-aos-delay={200 + idx * 50}>
                     {skill}
                   </span>
                 ))}

@@ -1,10 +1,24 @@
-import { StrictMode } from 'react'
+import { StrictMode, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import './index.css'
 import App from './App.jsx'
 
+function MainApp() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+      offset: 50,
+    })
+  }, [])
+
+  return <App />
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <MainApp />
   </StrictMode>,
 )

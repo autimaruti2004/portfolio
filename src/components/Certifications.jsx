@@ -22,8 +22,12 @@ export default function Certifications() {
           <div className="certifications-scroll">
             {portfolioData.certifications.map((cert, index) => (
               <div key={cert.id} className="certification-card" data-aos="flip-left" data-aos-delay={100 + index * 100}>
-                <div className="cert-image" onClick={() => handleImageClick(cert.image)} data-aos="zoom-in" data-aos-delay={150 + index * 100}>
-                  <img src={cert.image} alt={cert.title} style={{ cursor: 'pointer' }} />
+                <div className="cert-image" onClick={() => cert.image && handleImageClick(cert.image)} data-aos="zoom-in" data-aos-delay={150 + index * 100}>
+                  {cert.image ? (
+                    <img src={cert.image} alt={cert.title} style={{ cursor: 'pointer' }} />
+                  ) : (
+                    <div className="placeholder">No Image</div>
+                  )}
                 </div>
                 <div className="cert-content" data-aos="fade-up" data-aos-delay={200 + index * 100}>
                   <h4>{cert.title}</h4>

@@ -169,25 +169,39 @@ export const portfolioData = {
   // Certifications Section
   certifications: [
     {
-      id: 4,
+      id: 6,
       title: "Introduction to SQL",
       issuer: "Simplilearn SkillUp",
-      year: "2025",
+      year: "2026",
       image: "/SQL CERTIFICATE.jpg",
     },
     {
-      id: 3,
+      id: 5,
       title: "Introduction to ASP.Net",
       issuer: "Simplilearn SkillUp",
-      year: "2025",
+      year: "2026",
       image: "/ASP.NET CERTIFICATE.jpg",
     },
     {
-      id: 2,
+      id: 4,
       title: "The Joy of Computing using Python",
       issuer: "NPTEL",
       year: "2025",
       image: "/NPTEL python.jpg",
+    },
+        {
+      id: 3,
+      title: "Pthon",
+      issuer: "Udemy",
+      year: "2024",
+      image: "",
+    },
+    {
+      id: 2,
+      title: "Java",
+      issuer: "Udemy",
+      year: "2024",
+      image: "",
     },
     {
       id: 1,

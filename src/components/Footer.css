@@ -1,8 +1,9 @@
 .footer {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #1a1f3a 0%, #0a0e27 100%);
+  color: #e0e0e0;
   padding: 1rem 2rem;
   text-align: center;
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
 }
 
 .footer-content {

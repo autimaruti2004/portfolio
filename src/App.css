@@ -36,8 +36,9 @@ section {
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: linear-gradient(90deg, #00d4ff, #8b5cf6);
   border-radius: 2px;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
 }
 
 /* Animations */

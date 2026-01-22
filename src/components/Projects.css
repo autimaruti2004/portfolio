@@ -1,6 +1,6 @@
 .projects {
   padding: 4rem 2rem;
-  background-color: #f8f9fa;
+  background-color: #0a0e27;
 }
 
 .container {
@@ -12,7 +12,7 @@
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
-  color: #333;
+  color: #e0e0e0;
   font-weight: 700;
 }
 
@@ -23,29 +23,32 @@
 }
 
 .project-card {
-  background: white;
+  background: #1a1f3a;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: row;
+  border: 1px solid rgba(0, 212, 255, 0.2);
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.3), 0 0 80px rgba(139, 92, 246, 0.2);
+  border-color: rgba(0, 212, 255, 0.4);
 }
 
 .project-image {
   width: 35%;
   height: 280px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1a1f3a 0%, #0a0e27 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   flex-shrink: 0;
+  border-right: 1px solid rgba(0, 212, 255, 0.2);
 }
 
 .project-image img {
@@ -75,13 +78,13 @@
 
 .project-title {
   font-size: 1.6rem;
-  color: #333;
+  color: #e0e0e0;
   margin: 0 0 0.8rem 0;
   font-weight: 700;
 }
 
 .project-description {
-  color: #666;
+  color: #a0a0a0;
   font-size: 1rem;
   margin: 0 0 1rem 0;
   line-height: 1.6;
@@ -89,7 +92,7 @@
 }
 
 .project-full-description {
-  color: #777;
+  color: #808080;
   font-size: 0.95rem;
   margin-bottom: 1.2rem;
   line-height: 1.7;

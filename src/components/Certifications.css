@@ -1,6 +1,6 @@
 .certifications {
   padding: 4rem 2rem;
-  background: #f5f5f5;
+  background: #0a0e27;
 }
 
 .certifications .container {
@@ -12,7 +12,7 @@
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2.5rem;
-  color: #333;
+  color: #e0e0e0;
   font-weight: 700;
 }
 
@@ -33,21 +33,21 @@
 }
 
 .certification-card {
-  background: white;
+  background: #1a1f3a;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   flex: 0 0 400px;
   min-width: 400px;
-  border: 2px solid #e0e0e0;
+  border: 1px solid rgba(0, 212, 255, 0.3);
 }
 
 .certification-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
 }
 
 .cert-image {
@@ -78,27 +78,27 @@
 
 .cert-content h4 {
   font-size: 1.3rem;
-  color: #333;
+  color: #e0e0e0;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .cert-content .issuer {
   font-size: 0.95rem;
-  color: #666;
+  color: #a0a0a0;
   margin-bottom: 0.3rem;
   font-weight: 500;
 }
 
 .cert-content .year {
   font-size: 0.9rem;
-  color: #999;
+  color: #808080;
   margin-bottom: 0.5rem;
 }
 
 .cert-content .description {
   font-size: 0.9rem;
-  color: #666;
+  color: #a0a0a0;
   line-height: 1.5;
 }
 

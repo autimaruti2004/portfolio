@@ -191,7 +191,7 @@ export const portfolioData = {
     },
         {
       id: 3,
-      title: "Pthon",
+      title: "Python",
       issuer: "Udemy",
       year: "2024",
       image: "",

@@ -87,27 +87,39 @@
   font-size: clamp(1rem, 1.8vw, 1.1rem);
 }
 
-.social-icons {
-  display: flex;
-  gap: clamp(0.8rem, 1.5vw, 1rem);
-  flex-wrap: wrap;
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
 }
 
-.social-icons a {
-  display: inline-block;
-  padding: clamp(0.5rem, 1vw, 0.6rem) clamp(0.8rem, 1.5vw, 1.2rem);
+.social-icon:hover {
   background-color: #667eea;
   color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+  transform: translateY(-3px);
 }
 
-.social-icons a:hover {
-  background-color: #5568d3;
-  transform: translateY(-2px);
+.social-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.follow-text {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
 }
 
 .contact-form {
@@ -182,15 +194,25 @@
 }
 
 .social-section {
-  margin-top: 3.5rem;
-  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+  text-align: left;
 }
 
-.social-section h3 {
-  font-size: 1.5rem;
+.social-section h4 {
+  font-size: 1.1rem;
   color: #333;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
   font-weight: 700;
+}
+
+.social-section .social-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 
 .social-links {

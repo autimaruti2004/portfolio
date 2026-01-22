@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>&copy; {currentYear} {portfolioData.personal.name}. All rights reserved.</p>
+        <p>&copy; {currentYear}. Created by {portfolioData.personal.name}</p>
       </div>
     </footer>
   );

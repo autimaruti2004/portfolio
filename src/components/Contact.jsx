@@ -50,9 +50,84 @@ export default function Contact() {
         <h2 className="section-title" data-aos="fade-up">Contact</h2>
         
         <div className="contact-content">
-          <div className="contact-info" data-aos="fade-right" data-aos-delay="100">
-            <h3>Get In Touch</h3>
-            <p>{portfolioData.contact.message}</p>
+          <form className="contact-form" onSubmit={handleSubmit} data-aos="fade-right" data-aos-delay="100">
+            <h3>Contact Me</h3>
+
+            {success && (
+              <div className="success-message" data-aos="zoom-in">
+                ✓ Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+
+            {error && (
+              <div className="error-message" data-aos="zoom-in">
+                ✗ {error}
+              </div>
+            )}
+
+            <div className="form-group" data-aos="fade-up" data-aos-delay="150">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                placeholder="Name *"
+                disabled={loading}
+              />
+            </div>
+
+            <div className="form-group" data-aos="fade-up" data-aos-delay="200">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="Email *"
+                disabled={loading}
+              />
+            </div>
+
+            <div className="form-group" data-aos="fade-up" data-aos-delay="250">
+              <label htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+                placeholder="Subject *"
+                disabled={loading}
+              />
+            </div>
+
+            <div className="form-group" data-aos="fade-up" data-aos-delay="300">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                placeholder="Message *"
+                rows="5"
+                disabled={loading}
+              ></textarea>
+            </div>
+
+            <button type="submit" className="submit-btn" disabled={loading} data-aos="fade-up" data-aos-delay="350">
+              {loading ? 'Sending...' : 'Send Message'}
+            </button>
+          </form>
+
+          <div className="contact-info" data-aos="fade-left" data-aos-delay="100">
+            <h3>Get in touch</h3>
             
             <div className="info-items">
               <div className="info-item" data-aos="zoom-in" data-aos-delay="150">
@@ -70,117 +145,44 @@ export default function Contact() {
               </div>
               
               <div className="info-item" data-aos="zoom-in" data-aos-delay="250">
-                <span className="info-label">Location:</span>
+                <span className="info-label">Address:</span>
                 <p>{portfolioData.contact.location}</p>
               </div>
             </div>
-          </div>
 
-          <form className="contact-form" onSubmit={handleSubmit} data-aos="fade-left" data-aos-delay="100">
-            <h3>Contact Me</h3>
-
-            {success && (
-              <div className="success-message" data-aos="zoom-in">
-                ✓ Message sent successfully! I'll get back to you soon.
+            <div className="social-section">
+              <h4>Follow Me</h4>
+              <p className="follow-text">Follow me on social media to stay updated with my latest projects and activities.</p>
+              <p className="follow-text">You can also connect with me on LinkedIn to explore potential collaborations and opportunities.</p>
+              
+              <div className="social-links">
+                {portfolioData.social.facebook && (
+                  <a href={portfolioData.social.facebook} target="_blank" rel="noopener noreferrer" title="Facebook" className="social-icon facebook" data-aos="zoom-in" data-aos-delay="300">
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                )}
+                {portfolioData.social.twitter && (
+                  <a href={portfolioData.social.twitter} target="_blank" rel="noopener noreferrer" title="Twitter" className="social-icon twitter" data-aos="zoom-in" data-aos-delay="350">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                )}
+                {portfolioData.social.instagram && (
+                  <a href={portfolioData.social.instagram} target="_blank" rel="noopener noreferrer" title="Instagram" className="social-icon instagram" data-aos="zoom-in" data-aos-delay="400">
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                )}
+                {portfolioData.social.github && (
+                  <a href={portfolioData.social.github} target="_blank" rel="noopener noreferrer" title="GitHub" className="social-icon github" data-aos="zoom-in" data-aos-delay="450">
+                    <i className="fab fa-github"></i>
+                  </a>
+                )}
+                {portfolioData.social.linkedin && (
+                  <a href={portfolioData.social.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn" className="social-icon linkedin" data-aos="zoom-in" data-aos-delay="500">
+                    <i className="fab fa-linkedin-in"></i>
+                  </a>
+                )}
               </div>
-            )}
-
-            {error && (
-              <div className="error-message" data-aos="zoom-in">
-                ✗ {error}
-              </div>
-            )}
-
-            <div className="form-group" data-aos="fade-up" data-aos-delay="150">
-              <label htmlFor="name">Your Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="Maruti Auti"
-                disabled={loading}
-              />
             </div>
-
-            <div className="form-group" data-aos="fade-up" data-aos-delay="200">
-              <label htmlFor="email">Your Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                placeholder="autimaruti2004@example.com"
-                disabled={loading}
-              />
-            </div>
-
-            <div className="form-group" data-aos="fade-up" data-aos-delay="250">
-              <label htmlFor="subject">Subject</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                placeholder="Project Opportunity"
-                disabled={loading}
-              />
-            </div>
-
-            <div className="form-group" data-aos="fade-up" data-aos-delay="300">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                placeholder="Your message here..."
-                rows="5"
-                disabled={loading}
-              ></textarea>
-            </div>
-
-            <button type="submit" className="submit-btn" disabled={loading} data-aos="fade-up" data-aos-delay="350">
-              {loading ? 'Sending...' : 'Send Message'}
-            </button>
-          </form>
-        </div>
-
-        <div className="social-section" data-aos="fade-up" data-aos-delay="200">
-          <h3>Follow Me</h3>
-          <div className="social-links">
-            {portfolioData.social.github && (
-              <a href={portfolioData.social.github} target="_blank" rel="noopener noreferrer" title="GitHub" className="social-link github" data-aos="zoom-in" data-aos-delay="250">
-                GitHub
-              </a>
-            )}
-            {portfolioData.social.twitter && (
-              <a href={portfolioData.social.twitter} target="_blank" rel="noopener noreferrer" title="Twitter" className="social-link twitter" data-aos="zoom-in" data-aos-delay="300">
-                Twitter
-              </a>
-            )}
-            {portfolioData.social.linkedin && (
-              <a href={portfolioData.social.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn" className="social-link linkedin" data-aos="zoom-in" data-aos-delay="350">
-                LinkedIn
-              </a>
-            )}
-            {portfolioData.social.instagram && (
-              <a href={portfolioData.social.instagram} target="_blank" rel="noopener noreferrer" title="Instagram" className="social-link instagram" data-aos="zoom-in" data-aos-delay="400">
-                Instagram
-              </a>
-            )}
-            {portfolioData.social.facebook && (
-              <a href={portfolioData.social.facebook} target="_blank" rel="noopener noreferrer" title="Facebook" className="social-link facebook" data-aos="zoom-in" data-aos-delay="450">
-                Facebook
-              </a>
-            )}
           </div>
         </div>
       </div>

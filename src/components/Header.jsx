@@ -1,11 +1,15 @@
 import './Header.css';
+import { useState } from 'react';
 import { portfolioData } from '../config/portfolioData';
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false);
     }
   };
 
@@ -22,7 +26,18 @@ export default function Header() {
             <h1>{portfolioData.personal.name}</h1>
           </div>
         </div>
-        <nav className="nav">
+        <button
+          className="nav-toggle"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((s) => !s)}
+        >
+          <span className="bar" />
+          <span className="bar" />
+          <span className="bar" />
+        </button>
+
+        <nav className={`nav ${menuOpen ? 'open' : ''}`}>
           {portfolioData.navigation.map((item) => (
             <button
               key={item.id}

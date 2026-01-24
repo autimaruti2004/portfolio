@@ -50,6 +50,24 @@
   flex-wrap: wrap;
 }
 
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  margin-left: 0.5rem;
+}
+
+.nav-toggle .bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px 0;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
 .nav-link {
   background: none;
   border: none;
@@ -92,10 +110,24 @@
     padding: 0 clamp(0.8rem, 1.5vw, 1.5rem);
   }
 
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 0.9rem;
+    z-index: 105;
+  }
+
   .nav {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none;
+    flex-direction: column;
     gap: clamp(0.6rem, 1vw, 1rem);
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav.open {
+    display: flex;
   }
 
   .logo h1 {

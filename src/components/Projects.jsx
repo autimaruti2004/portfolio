@@ -40,8 +40,8 @@ export default function Projects() {
                       View Code
                     </a>
                   )}
-                  {project.fullDescription && (
-                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-btn read-more" data-aos="fade-left">
+                  {project.readMoreLink && (
+                    <a href={project.readMoreLink} target="_blank" rel="noopener noreferrer" className="project-btn read-more" data-aos="fade-left">
                       Read More
                     </a>
                   )}

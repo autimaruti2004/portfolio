@@ -2,11 +2,14 @@
   background: linear-gradient(135deg, #1a1f3a 0%, #0a0e27 100%);
   color: #e0e0e0;
   padding: clamp(0.8rem, 1.5vw, 1rem) 0;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
   border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  width: 100%;
 }
 
 .header-container {
@@ -105,9 +108,10 @@
   }
 
   .header-container {
-    flex-direction: column;
+    flex-direction: row;
     gap: clamp(0.8rem, 1.5vw, 1rem);
     padding: 0 clamp(0.8rem, 1.5vw, 1.5rem);
+    position: relative;
   }
 
   .nav-toggle {
